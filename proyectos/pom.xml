@@ -22,6 +22,7 @@
     <module>EjemploInterfazComparable</module>
     <module>EjemploInterfazDebugger</module>
     <module>EjemploJavadoc</module>
+    <module>EjemploJavadocMarkdown</module>
     <module>EjemploJunit</module>
     <module>EjemploJdbc</module>
     <module>EjemploLeerFichero</module>
