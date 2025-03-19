@@ -5,8 +5,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>EjemploJavadoc</artifactId>
-	<name>Ejemplo Javadoc</name>
+	<artifactId>EjemploJavadocMarkdown</artifactId>
+	<name>Ejemplo Javadoc con Markdown</name>
 	<parent>
 		<groupId>com.gsd.daw.prog</groupId>
 		<artifactId>PomBase</artifactId>
