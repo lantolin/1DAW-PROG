@@ -10,12 +10,13 @@
 	<parent>
 		<groupId>com.gsd.daw.prog</groupId>
 		<artifactId>PomBase</artifactId>
-		<version>1.0</version>
+		<version>2.0</version>
+		<relativePath/>
 	</parent>
 
 	<build>
 		<plugins>
-		<!-- En este proyecto se permite no parar en errores porque TIENE que haber errores, para eso sirve -->
+		<!-- En este proyecto se permite no parar en errores porque TIENE que haber errores para aprender como se hace mal -->
 			<plugin>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<configuration>
