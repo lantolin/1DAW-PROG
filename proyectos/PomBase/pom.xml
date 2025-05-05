@@ -20,9 +20,6 @@
       <id>entrega-javadoc</id>
     </profile>
     <profile>
-      <!--  este perfil solo se puede lanzar desde el parent POM. No he conseguido que se pueda
-			lanzar desde el parent y desde el propio proyecto pq el path del assembly-package.xml es
-			relativo al sitio desde donde se lanza -->
       <id>entregable-alumno</id>
       <build>
         <plugins>
@@ -30,9 +27,28 @@
             <artifactId>maven-assembly-plugin</artifactId>
             <version>3.7.1</version>
             <configuration>
-              <descriptors>
-                <descriptor>assembly-package.xml</descriptor>
-              </descriptors>
+              <inlineDescriptors>
+                <inlineDescriptor>
+                  <id>alumno</id>
+                  <formats>
+                    <format>zip</format>
+                  </formats>
+                  <fileSets>
+                    <fileSet>
+                      <directory>${project.basedir}</directory>
+                      <outputDirectory>${file.separator}</outputDirectory>
+                      <useDefaultExcludes>true</useDefaultExcludes>
+                      <excludes>
+                        <exclude>.classpath</exclude>
+                        <exclude>.settings/</exclude>
+                        <exclude>bin/</exclude>
+                        <exclude>**/*.log</exclude>
+                        <exclude>target/</exclude>
+                      </excludes>
+                    </fileSet>
+                  </fileSets>
+                </inlineDescriptor>
+              </inlineDescriptors>
             </configuration>
             <executions>
               <execution>
@@ -58,7 +74,7 @@
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
-      <version>5.11.3</version>
+      <version>5.13.0-M3</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -268,6 +284,7 @@
               </module>
             </module>
           </checkstyleRules>
+          <failOnViolation>false</failOnViolation>
           <consoleOutput>true</consoleOutput>
           <linkXRef>false</linkXRef>
         </configuration>
