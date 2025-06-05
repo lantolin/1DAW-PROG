@@ -16,6 +16,12 @@
     <profile>
       <id>corregir</id>
     </profile>
+        <profile>
+            <id>ESPAÑOL</id>
+            <properties>
+                <argLine>-Duser.language=es -Duser.region=ES</argLine>
+            </properties>
+        </profile>
     <profile>
       <id>javadoc-con-uml</id>
       <build>
